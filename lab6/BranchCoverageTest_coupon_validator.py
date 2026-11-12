@@ -40,7 +40,7 @@ def test_best_discount_loop_skips_update_branch():
 
 
 def test_best_discount_cap_true_branch():
-    assert best_discount(["FLAT100"], 200, False, "mon") == 80
+    assert best_discount(["WEEKEND20"], 100, False, "sat") == 40
 
 
 def test_best_discount_cap_false_branch():
