@@ -58,8 +58,8 @@ def test_best_discount_keeps_zero_when_no_coupon_applies():
 
 
 def test_best_discount_applies_forty_percent_cap():
-    # FLAT100 exceeds the cap on a cart total of 200.
-    assert best_discount(["FLAT100"], 200, False, "mon") == 80
+    # WEEKEND20 returns 50 on a 100 cart; the 40% cap is 40.
+    assert best_discount(["WEEKEND20"], 100, False, "sat") == 40
 
 
 def test_best_discount_equal_to_cap_is_not_changed():
